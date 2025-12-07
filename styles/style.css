@@ -359,13 +359,42 @@ section {
     height: 16px;
 }
 
-/* ===== ОСОБЕННОСТИ ===== */
+/* ===== ШАГ 3: Grid-сетка ===== */
 .features__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    gap: 1.5rem;
+    margin-top: 2rem;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Сохраняем твои цвета, но добавляем grid-поведение */
+.feature {
+    background: #3a3a3a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.feature:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
 .feature {
