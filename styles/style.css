@@ -470,3 +470,54 @@ section {
         gap: 20px;
     }
 }
+/* ===== ШАГ 2: Горизонтальное меню Flexbox ===== */
+.horizontal-nav {
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
+
+.nav-list {
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Центрируем элементы */
+    gap: 3rem; /* Отступы между пунктами */
+    list-style: none; /* Убираем точки у списка */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #d4af37; /* Золотой цвет как в твоей теме */
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #fff;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column; /* Меняем на вертикальное */
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
