@@ -550,6 +550,89 @@ section {
         font-size: 0.9rem;
     }
 }
+/* ===== ШАГ 5: Медиазапросы Desktop First ===== */
+
+/* Ноутбуки (меньше 1200px) */
+@media (max-width: 1199px) {
+    .main-content {
+        padding: 0 2rem;
+    }
+}
+
+/* Планшеты (меньше 992px) */
+@media (max-width: 991px) {
+    .side-bar {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+/* Планшеты (альбомная ориентация, меньше 768px) */
+@media (max-width: 767px) {
+    .side-bar {
+        display: none;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+    .giftset__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .combo__cards,
+    .taste__cards {
+        grid-template-columns: 1fr;
+    }
+    .footer__list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Мобильные (меньше 576px) */
+@media (max-width: 575px) {
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+    .masonry-grid {
+        column-count: 1;
+    }
+    section {
+        padding: 60px 20px;
+    }
+    .giftset__title,
+    .combo__title,
+    .taste__title,
+    .features__title,
+    .masonry-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Очень маленькие экраны (меньше 400px) */
+@media (max-width: 399px) {
+    .giftset__title,
+    .combo__title,
+    .taste__title,
+    .features__title,
+    .masonry-title {
+        font-size: 2rem;
+    }
+    .button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
 /* ===== ШАГ 4: Masonry-раскладка ===== */
 .masonry-section {
     background: #1a1a1a;
