@@ -553,7 +553,7 @@ section {
         width: 200px;
     }
     .main-content {
-        margin-left: 200px;
+        margin-left: 200px !important;
     }
     .masonry-grid {
         column-count: 2;
