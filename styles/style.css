@@ -397,19 +397,7 @@ section {
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
-.feature {
-    text-align: center;
-    padding: 30px;
-    background: #3a3a3a;
-    border-radius: 15px;
-    border: 1px solid #444;
-    transition: transform 0.3s;
-}
 
-.feature:hover {
-    transform: translateY(-5px);
-    border-color: #d4af37;
-}
 
 .feature__icon {
     margin-bottom: 20px;
@@ -474,31 +462,7 @@ section {
     font-size: 0.9rem;
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
-@media (max-width: 768px) {
-    .side-bar {
-        display: none;
-    }
-    
-    .main-content {
-        margin-left: 0;
-    }
-    
-    .giftset__content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .combo__cards,
-    .taste__cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer__list {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
+
 /* ===== ШАГ 2: Горизонтальное меню Flexbox ===== */
 .horizontal-nav {
     margin-top: 1.5rem;
@@ -537,10 +501,34 @@ section {
     color: #fff;
 }
 
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
+/* Медиазапрос 767px (из задания) */
+@media (max-width: 767px) {
+    .side-bar {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .giftset__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .combo__cards,
+    .taste__cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer__list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Стили для меню */
     .nav-list {
-        flex-direction: column; /* Меняем на вертикальное */
+        flex-direction: column;
         gap: 1rem;
         align-items: center;
     }
@@ -569,29 +557,6 @@ section {
     }
     .masonry-grid {
         column-count: 2;
-    }
-}
-
-/* Планшеты (альбомная ориентация, меньше 768px) */
-@media (max-width: 767px) {
-    .side-bar {
-        display: none;
-    }
-    .main-content {
-        margin-left: 0;
-        padding: 0 1rem;
-    }
-    .giftset__content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .combo__cards,
-    .taste__cards {
-        grid-template-columns: 1fr;
-    }
-    .footer__list {
-        flex-direction: column;
-        gap: 20px;
     }
 }
 
@@ -704,5 +669,30 @@ section {
 @media (max-width: 576px) {
     .masonry-grid {
         column-count: 1;
+    }
+}
+/* ФИКС: убираем горизонтальный скролл */
+@media (max-width: 399px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .banner {
+        height: 50vh;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Гарантируем скрытие сайдбара */
+    .side-bar {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+        width: 100%;
     }
 }
