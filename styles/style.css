@@ -259,6 +259,13 @@ section {
     max-width: 1200px;
     margin: 0 auto;
 }
+@media (max-width: 768px) {
+    .combo__cards,
+    .taste__cards {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 
 .card,
 .taste-card {
