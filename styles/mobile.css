@@ -196,8 +196,9 @@
     .taste__cards,
     .features__grid {
         grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-}
+        max-width: 100% !important;
+        gap: 20px !important;
+    }
     
     .masonry-grid {
         column-count: 1;
