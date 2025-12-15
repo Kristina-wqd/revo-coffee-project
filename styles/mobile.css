@@ -21,10 +21,8 @@
         line-height: 1.2;
     }
     
-    /* Исправление от преподавателя */
-    .main-content {
-        margin-left: 60px !important;
-    }
+    /* Убираем марджин для .main-content - оставляем как есть в style.css */
+    /* margin-left будет автоматически от сайдбара */
     
     .combo__cards,
     .taste__cards,
