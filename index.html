@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revo Coffee</title>
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Добавлено для практики 5 -->
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 <body>
+    <!-- САЙДБАР -->
     <aside class="side-bar">
         <div class="side-bar__logo">
             <span class="side-bar__logo-main">REVO</span>
@@ -23,19 +26,27 @@
         </nav>
     </aside>
 
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
     <div class="main-content">
         <header class="top-header">
             <p>&copy;&nbsp;Revo Coffee Вьетнам&nbsp;&mdash; 2018</p>
             
-            <nav class="horizontal-nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="#giftset" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="#combo" class="nav-link">О проекте</a></li>
-            <li class="nav-item"><a href="#taste" class="nav-link">Услуги</a></li>
-            <li class="nav-item"><a href="#features" class="nav-link">Контакты</a></li>
-        </ul>
-    </nav>
+            <!-- ГАМБУРГЕР-КНОПКА (добавлено для практики 5) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="menu-toggle_line"></span>
+                <span class="menu-toggle_line"></span>
+                <span class="menu-toggle_line"></span>
+            </button>
             
+            <!-- ГОРИЗОНТАЛЬНАЯ НАВИГАЦИЯ с id (добавлено для практики 5) -->
+            <nav class="horizontal-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#giftset" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="#combo" class="nav-link">О проекте</a></li>
+                    <li class="nav-item"><a href="#taste" class="nav-link">Услуги</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
         </header>
 
         <div class="banner">
@@ -43,6 +54,7 @@
         </div>
 
         <main>
+            <!-- ВАШ СУЩЕСТВУЮЩИЙ КОНТЕНТ -->
             <section class="giftset" id="giftset">
                 <h1 class="giftset__title">ПОДАРОЧНЫЕ НАБОРЫ</h1>
                 <h2 class="giftset__subtitle">Лучший подарок для лучшего друга</h2>
@@ -214,28 +226,28 @@
                     </div>
                 </div>
             </section>
-            <!-- ===== ШАГ 4: Masonry-раскладка ===== -->
-<section class="masonry-section">
-    <h2 class="masonry-title">Дополнительные материалы</h2>
-    <div class="masonry-grid">
-        <article class="masonry-item masonry-item--short">
-            <h3 class="masonry-item-title">Краткий материал</h3>
-            <p class="masonry-item-text">Короткое описание.</p>
-        </article>
-        <article class="masonry-item masonry-item--tall">
-            <h3 class="masonry-item-title">Подробный материал</h3>
-            <p class="masonry-item-text">Развёрнутое описание с дополнительной информацией и деталями реализации.</p>
-        </article>
-        <article class="masonry-item">
-            <h3 class="masonry-item-title">Стандартный материал</h3>
-            <p class="masonry-item-text">Обычное описание материала средней длины.</p>
-        </article>
-        <article class="masonry-item masonry-item--very-tall">
-            <h3 class="masonry-item-title">Обширный материал</h3>
-            <p class="masonry-item-text">Полное описание со всеми техническими характеристиками, особенностями применения и рекомендациями по использованию в различных условиях.</p>
-        </article>
-    </div>
-</section>
+            
+            <section class="masonry-section">
+                <h2 class="masonry-title">Дополнительные материалы</h2>
+                <div class="masonry-grid">
+                    <article class="masonry-item masonry-item--short">
+                        <h3 class="masonry-item-title">Краткий материал</h3>
+                        <p class="masonry-item-text">Короткое описание.</p>
+                    </article>
+                    <article class="masonry-item masonry-item--tall">
+                        <h3 class="masonry-item-title">Подробный материал</h3>
+                        <p class="masonry-item-text">Развёрнутое описание с дополнительной информацией и деталями реализации.</p>
+                    </article>
+                    <article class="masonry-item">
+                        <h3 class="masonry-item-title">Стандартный материал</h3>
+                        <p class="masonry-item-text">Обычное описание материала средней длины.</p>
+                    </article>
+                    <article class="masonry-item masonry-item--very-tall">
+                        <h3 class="masonry-item-title">Обширный материал</h3>
+                        <p class="masonry-item-text">Полное описание со всеми техническими характеристиками, особенностями применения и рекомендациями по использованию в различных условиях.</p>
+                    </article>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
@@ -253,5 +265,13 @@
             </div>
         </footer>
     </div>
+    
+    <!-- КНОПКА "НАВЕРХ" (добавлено для практики 5) -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        ↑
+    </button>
+    
+    <!-- ПОДКЛЮЧЕНИЕ JAVASCRIPT (добавлено для практики 5) -->
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
