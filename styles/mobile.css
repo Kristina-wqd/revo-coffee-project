@@ -1,0 +1,260 @@
+/* Мобильные стили для Revo Coffee - Практика 5 */
+
+/* Планшет (1024px и меньше) */
+@media (max-width: 1024px) {
+    .side-bar {
+        width: 60px;
+        padding: 20px 10px;
+    }
+    
+    .side-bar__logo-main {
+        font-size: 1.2rem;
+    }
+    
+    .side-bar__logo-subtitle {
+        display: none;
+    }
+    
+    .side-bar__link {
+        font-size: 0.7rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    /* Исправление от преподавателя */
+    .main-content {
+        margin-left: 60px !important;
+    }
+    
+    .combo__cards,
+    .taste__cards,
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+/* Планшет и мобильные (768px и меньше) */
+@media (max-width: 768px) {
+    /* Гамбургер-меню */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        padding: 12px 10px;
+        cursor: pointer;
+        z-index: 1001;
+        margin-left: auto;
+    }
+    
+    .menu-toggle_line {
+        width: 100%;
+        height: 3px;
+        background: #d4af37;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Анимация гамбургера */
+    .menu-toggle.active .menu-toggle_line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active .menu-toggle_line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .menu-toggle_line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Скрываем sidebar на мобильных */
+    .side-bar {
+        display: none !important;
+    }
+    
+    /* ВАЖНОЕ ИСПРАВЛЕНИЕ от преподавателя */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 0 15px;
+        width: 100%;
+    }
+    
+    /* Меню для мобильных */
+    .horizontal-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #2d2d2d;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        padding: 80px 30px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        overflow-y: auto;
+        margin-top: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+    
+    .horizontal-nav.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+    
+    .nav-item {
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        color: #ccc;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+        font-family: 'Inter', sans-serif;
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: 400;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        color: #d4af37;
+        padding-left: 10px;
+    }
+    
+    /* Затемнение фона */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+    
+    .nav-overlay.active {
+        display: block;
+    }
+    
+    /* Адаптация контента */
+    .top-header {
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        background: #2d2d2d;
+        z-index: 998;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .top-header p {
+        margin: 0;
+    }
+    
+    .banner__image {
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
+    .giftset__content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .giftset__image {
+        order: -1;
+    }
+    
+    .giftset__img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .combo__cards,
+    .taste__cards,
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .masonry-grid {
+        column-count: 1;
+    }
+    
+    /* Увеличиваем размер шрифта */
+    body {
+        font-size: 17px !important;
+    }
+    
+    .giftset__title,
+    .combo__title,
+    .taste__title,
+    .features__title,
+    .masonry-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .giftset__subtitle,
+    .combo__subtitle,
+    .taste__subtitle,
+    .features__subtitle {
+        font-size: 1.2rem !important;
+    }
+    
+    section {
+        padding: 60px 20px !important;
+    }
+}
+
+/* Маленькие мобильные (480px и меньше) */
+@media (max-width: 480px) {
+    .horizontal-nav {
+        width: 100%;
+    }
+    
+    .giftset__actions,
+    .card__actions,
+    .taste-card__actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .button {
+        width: 100%;
+        min-height: 44px;
+        font-size: 16px;
+    }
+    
+    .giftset__specs {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer__list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
