@@ -552,9 +552,6 @@ section {
     .side-bar {
         width: 200px;
     }
-    .main-content {
-        margin-left: 200px !important;
-    }
     .masonry-grid {
         column-count: 2;
     }
