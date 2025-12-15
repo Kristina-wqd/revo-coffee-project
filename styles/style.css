@@ -718,3 +718,39 @@ section {
         font-size: 22px;
     }
 }
+/* ========== ФИНАЛЬНЫЙ ФИКС ДЛЯ ПРАКТИКИ 5 ========== */
+@media (max-width: 768px) {
+    /* Адаптивные grid */
+    .combo__cards,
+    .taste__cards,
+    .features__grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Гамбургер */
+    .menu-toggle {
+        display: flex !important;
+    }
+    
+    /* Sidebar */
+    .side-bar {
+        display: none !important;
+    }
+    
+    /* Основной контент */
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .combo__cards,
+    .taste__cards,
+    .features__grid {
+        gap: 15px !important;
+    }
+}
